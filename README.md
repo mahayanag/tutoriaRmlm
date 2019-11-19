@@ -4,7 +4,7 @@
 
 > Godoy, M. C. (2019). Introdução aos modelos lineares mistos para os estudos da linguagem. PsyArXiv. https://doi.org/10.17605/OSF.IO/9T8UR
 
-**Apresentação: objetivo, público alvo**
+**Apresentação: objetivo e público alvo**
 
 Este tutorial tem por objetivo de ensinar os conceitos básicos de Modelos Lineares Mistos e sua implementação em R no ambiente do RStudio. Apesar de haver muitos tutoriais bons sobre o tema em inglês, há pouco material desse tipo produzido em português para acadêmicos que têm pouca familiaridade com estatística. Por isso, o tutorial foi pensado para um público de pesquisadores em Ciências Humanas que têm pouco ou nenhum contato com linguagem de programação e pouco conhecimento de estatística. Para acompanhar o tutorial por conta própria, você deve conhecer os conceitos de média, mediana e distribuição normal. Além disso, fica mais fácil se você souber como funciona um histograma e um boxplot.
 
