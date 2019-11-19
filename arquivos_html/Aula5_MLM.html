@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="Mahayana C. Godoy (PPgEL/UFRN)" />
+
+
+<title>Introdução a modelos lineares mistos para os estudos da linguagem (aula 5)</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<link href="data:text/css;charset=utf-8,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20700px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%201%2E35%3B%0A%7D%0A%23header%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%2010px%3B%0Apadding%3A%204px%3B%0Awidth%3A%20400px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%20%7B%0Amargin%3A%201em%20auto%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%200%2E25em%200%2E75em%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0A%7D%0Apre%20%7B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200px%2010px%200px%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0Afont%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%200px%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%3A%201px%20solid%20%23DDDDDD%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%20code%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" rel="stylesheet" type="text/css" />
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Introdução a modelos lineares mistos para os estudos da linguagem (aula 5)</h1>
+<h4 class="author">Mahayana C. Godoy (PPgEL/UFRN)</h4>
+<h4 class="date">16/11/2019</h4>
+
+
+
+<blockquote>
+<p><strong>Para citar este material:</strong></p>
+<p>Godoy, M. C. (2019). Introdução aos modelos lineares mistos para os estudos da linguagem. PsyArXiv. <a href="https://doi.org/10.17605/OSF.IO/9T8UR" class="uri">https://doi.org/10.17605/OSF.IO/9T8UR</a></p>
+</blockquote>
+<div id="modelos-lineares-generalizados-mistos" class="section level2">
+<h2>5. Modelos lineares generalizados mistos</h2>
+<p>Nesta seção, vamos aprender a fazer análise em dados categóricos binários por meio de modelos lineares generalizados mistos. Os tópicos de que trataremos serão:</p>
+<ul>
+<li><p>A distribuição binomial</p></li>
+<li><p>Relação entre probabilidade, <em>odds</em> e <em>log-odds</em></p></li>
+<li><p>Interpretação de coeficientes de modelos lineares generalizados para dados binomiais</p></li>
+</ul>
+<p>Antes de começar, carregue os pacotes que serão usados na seção.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
+## Carregar pacotes para a seção
+
+<span class="kw">library</span>(lme4)
+<span class="kw">library</span>(lmerTest)
+<span class="kw">library</span>(ggplot2)
+<span class="kw">library</span>(dplyr)</code></pre></div>
+</div>
+<div id="a-distribuicao-binomial" class="section level2">
+<h2>5.1 A distribuição binomial</h2>
+<p>Até o momento, vimos casos de experimentos e análises em que a variável resposta era uma medida numérica e contínua. No entanto, são várias as situações em que um pesquisador precisa criar modelos em que a variável dependente é de natureza categórica, como gênero, cidade, faixa etária, classe social etc., e gera distribuições diferentes da distribuição normal. Dentre as distribuições possíveis para dados categóricos, a <strong>distribuição binomial</strong> é uma das mais comuns.</p>
+<p>A distribuição binomial é aplicada para calcular as probablidades de sucesso de um evento que tenha apenas dois resultados possíveis. Eventos desse tipo seriam tirar cara ou coroa, ter olho castanho ou não-castanho, errar ou acertar uma questão, comprar um item ou não comprar um item, clicar numa propaganda ou não clicar numa propaganda etc. Podemos usar uma distribuição binomial para modelar o resultado desses eventos quando:</p>
+<ul>
+<li><p>só há dois resultados possíveis a cada tentativa;</p></li>
+<li><p>todas as tentativas são independentes das demais;</p></li>
+<li><p>a probabilidade de sucesso permanece inalterada em toda tentativa.</p></li>
+</ul>
+<p>Um bom exemplo de fenômeno que pode ser descrito por uma binomial é a probabilidade de tirar cara em <em>n</em> lançamentos de moeda. A cada nova tentativa, minha probabilidade de tirar cara permanece em 0.5, e o fato de eu ter tirado cara em um lance anterior não muda esse fato. Não poderíamos dizer o mesmo para a probabilidade de tirar uma bola vermelha de dentro de uma caixa com 10 bolas vermelhas e 10 bolas pretas. Inicialmente, minha probabilidade de tirar uma bola vermelha é de 0.5. Se eu tirar uma bola preta <em>sem devolvê-la para caixa</em>, minha probabilidade de tirar vermelha muda: é agora de 10/19, ou 0.52. A cada lance, minha probabilidade de tirar uma bola vermelha é alterada a depender das tentativas anteriores.</p>
+<p>Nesta seção, vamos aprender a analisar dados em distribuição binomial a partir de regressão logística. Se você não se sente seguro sobre a definição de uma binomial, faça uma pausa no tutorial e estude um pouco o assunto. Caso contrário, podemos começar discutindo</p>
+</div>
+<div id="probabilidades-e-chances-odds" class="section level2">
+<h2>5.2 Probabilidades e chances (odds)</h2>
+<p>Na literatura, é comum que dados em distribuição binomial sejam analisados por meio de um teste chamado <code>qui-quadrado</code> (ou <code>chi-square</code>, em inglês). No entanto, dados de experimentos ou observações que trazem medidas repetidas por participantes, itens ou outros fatores não são adequadamente tratados por esse tipo de teste. Por esse motivo, nesses casos é preferível fazer uma <strong>regressão logística</strong>. Para entender o que é a regressão logística, primeiro precisamos entender os conceitos de <strong>probabilidade</strong> e <strong>chance</strong> (ou <em>odds</em>, em inglês).</p>
+<p>Vamos imaginar que eu apostei no lançamento de uma moeda de cara ou coroa. Se eu tirar coroa, eu ganho. Se eu tirar cara, eu perco. Perceba que o resultado desse experimento me dá uma distribuição binominal: meus resultados podem ser codificados em termos de sucesso e fracasso, e cada lançamento de moeda gera um resultado independente dos demais.</p>
+<p>Imagine que jogamos as moedas 100 vezes. Eu tive 50 sucessos (coroa) e 50 fracassos (cara). As três afirmações abaixo descrevem, de maneiras diferentes, esse resultado.</p>
+<blockquote>
+<ol style="list-style-type: lower-alpha">
+<li>A chance de sair coroa é de 1:1 (um para um - uma coroa para cada cara)</li>
+<li>A chance de sair coroa é de 50%</li>
+<li>A probabilidade de sair coroa é de 0.5 (50 em 100, ou 50/100)</li>
+</ol>
+</blockquote>
+<p>Vamos continuar jogando a nossa moeda imaginária. Dessa vez, eu joguei a moeda algumas vezes e tive 1 sucesso (coroa) e 10 fracassos (cara). Pelo menos uma das informações abaixo está incorreta. Tente corrigir antes de ver a resposta.</p>
+<blockquote>
+<ol style="list-style-type: lower-alpha">
+<li>a chance de sair coroa é de 1:10 (1 para 10).</li>
+<li>a chance, em porcentagem, de sair coroa é de 10%.</li>
+<li>a probabilidade de sair coroa é de 0.1.</li>
+</ol>
+</blockquote>
+<p><br></p>
+<p>Se eu tive 10 sucessos e 1 fracasso, significa que eu joguei a moeda 11 vezes. Portanto, é correto afirmar que minha chance de sucesso é de 1:10 (1 sucesso a cada 10 fracassos). Contudo, as outras informações estão erradas. Essa chance é de 9%, se eu quiser falar em termos de porcentagem, e a probabilidade de sucesso foi de 0.09.</p>
+<p>Voltemos à moeda. Agora joguei a moeda 100 vezes e tive 64 sucessos (coroa) e 36 fracassos (cara). Podemos fazer as seguiintes afirmações:</p>
+<blockquote>
+<ol style="list-style-type: lower-alpha">
+<li>a razão da chance (ou <strong>odds ratio</strong>, em inglês) de sair coroa é de 64:36 ou 32:18 ou 16:9 (a cada 16 coroas, saem 9 caras) ou 1.77 (para cada cara, sai 1.77 coroas)</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>a probabilidade de sair coroa é de 0.64 (a cada 100 jogadas, saem 64 coroas (64/100))</li>
+</ol>
+</blockquote>
+<p>A <strong>Tabela 5.1</strong> expressa a relação entre porcentagem, chance e probabilidade.</p>
+<div align="center">
+<table>
+<thead>
+<tr class="header">
+<th align="right">Porcentagem</th>
+<th align="right">Probabilidade</th>
+<th align="right">Chances (sucesso:fracasso)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">50%</td>
+<td align="right">0.5</td>
+<td align="right">1:1 ou 1</td>
+</tr>
+<tr class="even">
+<td align="right">10%</td>
+<td align="right">0.1</td>
+<td align="right">1:9 ou 0.11</td>
+</tr>
+<tr class="odd">
+<td align="right">90%</td>
+<td align="right">0.9</td>
+<td align="right">9:1 ou 9</td>
+</tr>
+<tr class="even">
+<td align="right">75%</td>
+<td align="right">0.75</td>
+<td align="right">3:1 ou 3</td>
+</tr>
+<tr class="odd">
+<td align="right">80%</td>
+<td align="right">0.8</td>
+<td align="right">8:2 ou 4:1 ou 4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tabela 5.1:</strong> Relação entre porcentagem, probabilidade e chance</p>
+</div>
+<p><br></p>
+<p><strong>Odds</strong> (ou chances) é só uma outra maneira de expressar probabilidades. Você já deve ter ouvido isso na mídia, quando dizem algo como <em>“estudos indicam que quem consome produto X tem 10 vezes mais chances de desenvolver câncer”</em>. Esse tipo de frase reporta uma chance de 10 para 1 (10:1).</p>
+<p>Quando comparamos a chance de sucesso entre dois grupos, A e B, um teste estatístico vai tentar responder as seguintes perguntas:</p>
+<blockquote>
+<p><em>A chance de sucesso no grupo A aumenta ou diminuiu em relação ao grupo B? Em quantas vezes? Essa mudança é significativamente diferente de 0?</em></p>
+</blockquote>
+<p>Aqui começamos a ver a relação entre uma análise que pretende analisar dados em distribuição binomial e as noções de <em>probabilidade</em> ou <em>chance</em>. Afinal, se essas são duas maneiras de expressar o resultado de um experimento cuja variável resposta tem distribuição binomial, qual dessas medidas deve entrar como variável resposta em um modelo estatístico? Há outras medidas possíveis?</p>
+<p>Vamos ver a resposta a essas perguntas mais adiante, mas por enquanto é bom ter em mente algumas propriedades sobre os valores possíveis de chance e probabilidade. Enquanto os valores de probabilidade se limitam entre 0 e 1, os valores da razão entre chances de sucesso e fracasso (odds ratio) tem um valor de 0 a infinito:</p>
+<p><br></p>
+<p><strong>Valores de probabilidade:</strong> 0 a 1</p>
+<p><strong>Valores de Odds Ratio:</strong> 0 a infinito</p>
+<p><br></p>
+<p>Agora que já conhecemos a noção de <strong>odds</strong> (começaremos a usar essa nomenclatura daqui em diante), vamos entender como utilizá-la para analisar um conjunto de dados e qual sua relação com a regressão logística.</p>
+</div>
+<div id="regressao-logistica-e-log-odds" class="section level2">
+<h2>5.3 Regressão logística e log-odds</h2>
+<p>A regressão logística analisa se a chance de sucesso de um grupo A é diferente da chance de sucesso do grupo B; ou seja: requer uma variável resposta categórica. Ilustremos com um subconjunto dos dados do estudo de Godoy et al. (2018), que já conhecemos na tarefa prática da Seção 1.</p>
+<p>Relembremos que uma das hipóteses desse estudo era a de que a interpretação do pronome ambíguo das sentenças (1) e (2) seria influenciada pelo aspecto perfectivo (“passou”) ou imperfectivo (“estava passando”) do verbo da sentença anterior. A probabilidade de escolher o referente no papel temático de alvo (e.g. Rubens) seria maior em (1) que em (2).</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>Augusto passou a bola para Rubens. Ele…</li>
+<li>Augusto estava passando a bola para Rubens. Ele…</li>
+</ol>
+</blockquote>
+<p>Para testar essa hipótese, os autores criaram sentenças semelhantes a essas e pediram para os participantes criarem continuações. Depois, analisaram as respostas para identificar se a interpretação do pronome retomava a fonte (como Augusto) ou o alvo (Rubens) e anotaram essas respostas numa planilha que você pode acessar importando o conjunto de dados <code>pronomes.csv</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
+<span class="co">#importar conjunto de dados</span>
+
+pronome =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;dados/pronome.csv&quot;</span>)
+
+<span class="co"># inspecionar conjunto de dados</span>
+
+<span class="kw">head</span>(pronome)
+<span class="co">#&gt;   participante item</span>
+<span class="co">#&gt; 1           MC    n</span>
+<span class="co">#&gt; 2          JFF    n</span>
+<span class="co">#&gt; 3         BPLB    n</span>
+<span class="co">#&gt; 4         NAME    n</span>
+<span class="co">#&gt; 5          M C    n</span>
+<span class="co">#&gt; 6           MA    n</span>
+<span class="co">#&gt;                                                       frase      aspecto</span>
+<span class="co">#&gt; 1 Mônica estava transferindo o dinheiro para Letícia. Ela.. imperfective</span>
+<span class="co">#&gt; 2 Mônica estava transferindo o dinheiro para Letícia. Ela.. imperfective</span>
+<span class="co">#&gt; 3 Mônica estava transferindo o dinheiro para Letícia. Ela.. imperfective</span>
+<span class="co">#&gt; 4 Mônica estava transferindo o dinheiro para Letícia. Ela.. imperfective</span>
+<span class="co">#&gt; 5 Mônica estava transferindo o dinheiro para Letícia. Ela.. imperfective</span>
+<span class="co">#&gt; 6 Mônica estava transferindo o dinheiro para Letícia. Ela.. imperfective</span>
+<span class="co">#&gt;   classe interpretacao</span>
+<span class="co">#&gt; 1     C3       ambiguo</span>
+<span class="co">#&gt; 2     C3         fonte</span>
+<span class="co">#&gt; 3     C3         fonte</span>
+<span class="co">#&gt; 4     C3         fonte</span>
+<span class="co">#&gt; 5     C3         fonte</span>
+<span class="co">#&gt; 6     C3         fonte</span>
+
+<span class="co"># inspecionar conjunto de dados 2</span>
+
+<span class="kw">str</span>(pronome)
+<span class="co">#&gt; 'data.frame':    569 obs. of  6 variables:</span>
+<span class="co">#&gt;  $ participante : Factor w/ 48 levels &quot;ACBO&quot;,&quot;B A S&quot;,..: 33 19 4 40 30 31 45 12 33 19 ...</span>
+<span class="co">#&gt;  $ item         : Factor w/ 12 levels &quot;b&quot;,&quot;d&quot;,&quot;f&quot;,&quot;g&quot;,..: 9 9 9 9 9 9 9 9 5 5 ...</span>
+<span class="co">#&gt;  $ frase        : Factor w/ 25 levels &quot;Beatriz encaminhou o ofício para Laura. Ela..&quot;,..: 18 18 18 18 18 18 18 18 10 10 ...</span>
+<span class="co">#&gt;  $ aspecto      : Factor w/ 2 levels &quot;imperfective&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</span>
+<span class="co">#&gt;  $ classe       : Factor w/ 2 levels &quot;C1&quot;,&quot;C3&quot;: 2 2 2 2 2 2 2 2 2 2 ...</span>
+<span class="co">#&gt;  $ interpretacao: Factor w/ 3 levels &quot;alvo&quot;,&quot;ambiguo&quot;,..: 2 3 3 3 3 3 3 3 3 1 ...</span></code></pre></div>
+<p>O conjunto de dados contém 6 colunas:</p>
+<blockquote>
+<p><code>participante</code>, com identificação dos participantes da pesquisa;</p>
+</blockquote>
+<blockquote>
+<p><code>item</code>, com identificação de 16 histórias utilizadas como itens experimentais;</p>
+</blockquote>
+<blockquote>
+<p><code>frase</code>, com as frases utilizadas no experimento;</p>
+</blockquote>
+<blockquote>
+<p><code>aspecto</code>, com identificação das condições de aspecto verbal: perfectivo (<code>perfective</code>) e imperfectivo (<code>imperfective</code>);</p>
+</blockquote>
+<blockquote>
+<p><code>classe</code>, uma condição experimental que entenderemos depois;</p>
+</blockquote>
+<blockquote>
+<p><code>interpretacao</code>: interpretação do pronome tal qual anotado pelos pesquisadores, e que indica interpretação de fonte (<code>fonte</code>), alvo (<code>alvo</code>) ou ambígua (<code>ambiguo</code>).</p>
+</blockquote>
+<p><br></p>
+<p>Antes de analisar os dados de interpretação de pronomes, precisamos excluir os dados de leitura ambígua dos pronomes. São aqueles casos em que a resposta dos participantes não deixava claro quem era o referente do pronome.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
+<span class="co"># filtragem para considerar apenas casos suja resposta tenha sido alvo ou fonte</span>
+
+pronome =<span class="st"> </span>pronome%&gt;%
+<span class="st">  </span><span class="kw">filter</span>(interpretacao ==<span class="st"> &quot;alvo&quot;</span> |<span class="st"> </span>interpretacao ==<span class="st"> &quot;fonte&quot;</span>)%&gt;%
+<span class="st">  </span><span class="kw">droplevels</span>()</code></pre></div>
+<p>Vamos usar o <code>dplyr</code> para ver quantas interpretações de <code>fonte</code> e <code>alvo</code> temos para os aspectos perfectivo e imperfectivo.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
+<span class="co"># tabela com contagem de pronome por aspecto</span>
+
+pronome%&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(aspecto, interpretacao)%&gt;%
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">n</span>())
+<span class="co">#&gt; # A tibble: 4 x 3</span>
+<span class="co">#&gt; # Groups:   aspecto [2]</span>
+<span class="co">#&gt;   aspecto      interpretacao     n</span>
+<span class="co">#&gt;   &lt;fct&gt;        &lt;fct&gt;         &lt;int&gt;</span>
+<span class="co">#&gt; 1 imperfective alvo             85</span>
+<span class="co">#&gt; 2 imperfective fonte           174</span>
+<span class="co">#&gt; 3 perfective   alvo            161</span>
+<span class="co">#&gt; 4 perfective   fonte           107</span>
+
+<span class="co"># tabela com frequência relativa de pronome por aspecto</span>
+
+pronome%&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(aspecto, interpretacao)%&gt;%
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">n</span>())%&gt;%
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">freq =</span> n /<span class="st"> </span><span class="kw">sum</span>(n))
+<span class="co">#&gt; # A tibble: 4 x 4</span>
+<span class="co">#&gt; # Groups:   aspecto [2]</span>
+<span class="co">#&gt;   aspecto      interpretacao     n  freq</span>
+<span class="co">#&gt;   &lt;fct&gt;        &lt;fct&gt;         &lt;int&gt; &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 imperfective alvo             85 0.328</span>
+<span class="co">#&gt; 2 imperfective fonte           174 0.672</span>
+<span class="co">#&gt; 3 perfective   alvo            161 0.601</span>
+<span class="co">#&gt; 4 perfective   fonte           107 0.399</span></code></pre></div>
+<p><br></p>
+<p>Comparemos esses valores aos valores em <em>odds</em> da <strong>Tabela 5.2</strong>.</p>
+<p><br></p>
+<div align="center">
+<table>
+<thead>
+<tr class="header">
+<th align="right">Aspecto</th>
+<th align="right">Odds (fonte:alvo)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">imperfectivo</td>
+<td align="right">174:85 ou 2.04</td>
+</tr>
+<tr class="even">
+<td align="right">perfectivo</td>
+<td align="right">107:161 ou 0.66</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tabela 5.2:</strong> <em>Odds ratio</em> por aspecto</p>
+</div>
+<p><br></p>
+<p>Os resultados indicam que, de fato, uma interpretação de fonte tem maior chance de ocorrer após uma sentença no imperfectivo do que no perfectivo. Podemos ver isso no gráfico abaixo.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
+## gráfico da relação entre aspecto x interpretação
+
+pronome%&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(aspecto, interpretacao)%&gt;%
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">n</span>())%&gt;%
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">frequencia =</span> n /<span class="st"> </span><span class="kw">sum</span>(n))%&gt;%
+<span class="st">  </span><span class="kw">ggplot</span>(., <span class="kw">aes</span>(<span class="dt">x =</span> aspecto, <span class="dt">y=</span> frequencia, <span class="dt">fill =</span> interpretacao))+
+<span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels=</span>scales::percent)+
+<span class="st">  </span><span class="kw">geom_col</span>(<span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>)+
+<span class="st">  </span><span class="kw">theme_bw</span>()</code></pre></div>
+<p><img src="data:image/png;base64,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HDYhgAACCCCQLgECcLpkOS8CCCCAAAJJBAjASXDYhAACCCCAQLoECMDpkuW8CCCAAAIIJBEgACfBYRMCCCCAAALpEiAAp0uW8yKAAAIIIJBEgACcBIdNCCCAAAIIpEsgYwF43bp19tFHH9ny5csLlGXevHk2fvx4W716dYFtwYpt27bZ5MmTbcqUKbZjx45gtW3fvt3GjBljs2bNCtdpYdSoUfbTTz/lWccbBBBAAAEEfBHISAB+9913rVu3bvbdd9/ZAw88YE8++WRY/kGDBtmAAQNs5syZ1rlzZ1u8eHG4LVjYsmWLdezY0SZMmGDDhg2znj17WiwWc5sffvhh27Vrl40YMSIMwkuWLLGpU6dalSpVglPwigACCCCAgFcCaQ/ACo6vvvqq9e3b166//nobOHCgawmrRbxo0SKbOHGiDRkyxHr16mUdOnSw4cOHFwAaOXKknXrqqda7d28bPHiwbd682aZPn+72mz17trVp08bOOuuscN2LL75o1113XYHzsAIBBBBAAAFfBMqnOyPlypWzoUOHhq3RrVu32qZNm1yrdeHChda4cWMrW/Y/vwNOPvlk152cP0/z58+3c845J1yt/ebMmWOnnXaa1a9f39asWWPLli2zBg0a2IIFC9y5GzZsGO6fuPD555/b3XffHa6qVatW0q7vcMcUFyqnuB+7ZafAqlWrSpRxvhclYsuag0r6vSisgDt37ixsNetyUCDtAVhmQVfw7t277amnnrLzzjvPFPh0PbhGjRoha/Xq1V0wDVf8d2HFihWmbUHS8tKlS91btXTVqj7wwAOtXbt21r9/f+vSpYvbpuvG++yzT3CYe9XnNW/ePFyn82if/PuFO7CAQIIA35MEDBZDgb35vShTpkx4XhZyWyAjAViECobqhta123vuucepqnWsLuog6ZdfpUqVgrfha7L9GjVqZLoOrKRWsY5XkO3Ro4fpOAXbtm3bhudSK7lPnz7he3VrV6tWLc8PgXBjCRY2leAYDskegcQfjMXJNd+L4mhl374l/V4UVlL93SJFQyDt14DFqGu2CogKdP369bOKFSs63dq1a9vatWtDaS3XrVs3fB8sqLWcf7969eoFm8PXl156yV37nTRpkuvafvDBB+2dd94Jt7OAAAIIIICALwIZCcD33XefHX300XbXXXe5VmlQ+KZNm5oGUWnUslq/o0eP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tZYvz3/+85+tevXqrlXRsWNHa9y4selpOt98841de+21rqVSpUoV94fzxRdftLlz59qjjz7q/qDWq1fPFixYYE8++aQdfvjhtnHjRvcAhSBI/+IXv7CHHnrI1Mp+6qmnTH889YQjBV390XziiSesW7dutnbtWnvggQfsiCOOsHnz5tnNN9/sHsagP6K33367+0NatmxZO/HEE+3qq6+2UaNGuT+4I0eOtFNPPdW1hq+//nobOnSovfDCC66EX3/9tT344IM2bNgwU4u5sPPno+BtCgL6jqiu9UPo3//+t6uPSy+9tMi61/28arHqu6Dvjn7wzZ492/TjrVKlSnbIIYcUWTdDhgyx0aNHu2P1A0zfM122UEBV3eq8gwYNcnV+5ZVXmr6fderUcduVT31PNdpeD/XI/53kPuMUKptd/BaI/49AynKBP/7xj7F44HKlaNu2bezNN990y/FrdLHTTz89Fm9Fuvfxp1bFZs6cGfvyyy9jv/71r2PfffedW//Xv/41dtNNN7nld955J/bYY4+55fgfvFiPHj1is2bNin3xxRexM844Ixbvco7FA6/brnPHWzdu+dZbb4198sknbjke/GMdOnSIxf/Ax+J/XGPxAO7W79ixIxYPxrEffvghNnbs2Nh9993n1sf/mMfif2xj+rzf/va3sSVLlrj1AwcOjMWDr1su6vxuI/8ploC+I/FA546J/3CKxVuxrl6LqnvtePHFF8feeustV6d6f//998fGjBmjxVhRdaPvTDxYx7Zs2eL2e/nll2PxbutYvKcj1qpVK7cuqHu9if+Yi8W7tt36zz//PNa5c2e3nCxfbgf+g0CWCtAC9vv3UYlyp1amklq3DRs2tP3228+9r1WrlsWDn9WtW9c9OlKtIKUWLVpYPIi7Fu2ECRPcOrVOlNQF/Pe//93iwdadT62R/En7xIO0ffDBB661re1qSWtwmFqx//M//+MOUctZLeaikp4frPuKx48f71pG+ly17pOdv1GjRkWdjvVJBOIB0G3df//97aijjnIt26Lq/oQTTnD7nnTSSQWebpWsbtRr0rRpU9t3333d8eqNUQq6ld2bhP/o8ZX9+/d33xddX77gggvc1j3lK+EULCKQVQIE4KyqrtQyq27BIKUyyUS8hWIVK1Z0D9DXcc2aNXNdxcE5qlWr5rqeE88bbAteFVwvuuii8AH8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" /><!-- --></p>
+<p><br></p>
+<p>Vamos ajustar um modelo de regressão logística simples. A função que usamos é <code>glm()</code>, porque uma regressão logística é um <strong>modelo linear generalizado</strong>. Os modelos lineares generalizados conseguem lidar com dados de inúmeras famílias de distribuição. A sintaxe é a mesma que vimos em tutoriais anteriores:</p>
+<div align="center">
+<blockquote>
+<p>interpretacao ~ aspecto</p>
+</blockquote>
+</div>
+<p>Como temos apenas um efeito fixo - aspecto - e esse efeito tem apenas dois níveis (imperfectivo e perfectivo), vamos usar o contraste <em>dummy</em>. Isso nos permitirá uma comparação direta entre os níveis <span class="math inline">\(A_1\)</span> e <span class="math inline">\(A_2\)</span> do efeito que estamos analisando. No código abaixo, além de informarmos a equação, dizemos que nossa variável resposta é uma <em>binomial</em>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
+<span class="co"># criando um modelo linear generalizado</span>
+
+modelo.aspecto =<span class="st"> </span><span class="kw">glm</span>(interpretacao ~<span class="st"> </span>aspecto, pronome, <span class="dt">family =</span> binomial)
+
+<span class="co"># vendo o resultado do modelo</span>
+
+<span class="kw">summary</span>(modelo.aspecto)
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Call:</span>
+<span class="co">#&gt; glm(formula = interpretacao ~ aspecto, family = binomial, data = pronome)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Deviance Residuals: </span>
+<span class="co">#&gt;     Min       1Q   Median       3Q      Max  </span>
+<span class="co">#&gt; -1.4928  -1.0095   0.8919   0.8919   1.3551  </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Coefficients:</span>
+<span class="co">#&gt;                   Estimate Std. Error z value Pr(&gt;|z|)    </span>
+<span class="co">#&gt; (Intercept)         0.7164     0.1323   5.414 6.17e-08 ***</span>
+<span class="co">#&gt; aspectoperfective  -1.1250     0.1818  -6.186 6.16e-10 ***</span>
+<span class="co">#&gt; ---</span>
+<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; (Dispersion parameter for binomial family taken to be 1)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     Null deviance: 728.25  on 526  degrees of freedom</span>
+<span class="co">#&gt; Residual deviance: 688.41  on 525  degrees of freedom</span>
+<span class="co">#&gt; AIC: 692.41</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Number of Fisher Scoring iterations: 4</span></code></pre></div>
+<p>Vamos começar tentando entender o que os valores dos coeficientes querem dizer.</p>
+<p>O <em>output</em> é similar ao que vimos para modelos lineares. Após o objeto <code>call</code> repetindo a fórmula do modelo, temos os resíduos e, então, os coeficientes. Aqui, entendemos que o aspecto imperfectivo está no lugar de intercepto. Isso significa que o modelo está comparando, em sua segunda linha, a distribuição da interpretação do pronome no perfectivo com o imperfectivo. Isso era esperado, já que usamos <em>dummy coding</em>. Mas o que os valores de <span class="math inline">\(\beta\)</span> querem dizer? Vamos começar com o <span class="math inline">\(\beta\)</span> do intercepto.</p>
+<p>Em primeiro lugar, é importante saber o que o teste reporta sobre a interpretação do pronome. <strong>A regressão compara a proporção de uso do nível de não-referência com o nível de referência.</strong> Parece confuso? Vamos dar uma olhada em quais são os níveis da nossa variável resposta.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># consultando níveis e o valor de referência</span>
+
+<span class="kw">levels</span>(pronome$interpretacao)
+<span class="co">#&gt; [1] &quot;alvo&quot;  &quot;fonte&quot;</span></code></pre></div>
+<p><br></p>
+<p>O comando <code>levels()</code> nos indica que o primeiro nível (o valor de referência) é <code>alvo</code> (porque o R segue ordem alfabética e numérica, e <code>alvo</code> vem antes de <code>fonte</code> por esse critério). No intercepto, a regressão está comparando, portanto, as taxas de fonte com as taxas do nível de referência, que é alvo, para o aspecto imperfectivo. Isso é exatamente o que fizemos quando falamos de <em>odds</em> - <code>sucesso:fracasso</code>.</p>
+<p>Vamos dar uma olhada nos valores do coeficiente mais uma vez. Veja que o valor de <span class="math inline">\(\beta\)</span> no intercept é positivo: 0.716404.</p>
+<div align="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Estimate
+</th>
+<th style="text-align:right;">
+Std. Error
+</th>
+<th style="text-align:right;">
+z value
+</th>
+<th style="text-align:right;">
+Pr(&gt;|z|)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+0.716404
+</td>
+<td style="text-align:right;">
+0.1323323
+</td>
+<td style="text-align:right;">
+5.413677
+</td>
+<td style="text-align:right;">
+1e-07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+aspectoperfective
+</td>
+<td style="text-align:right;">
+-1.124980
+</td>
+<td style="text-align:right;">
+0.1818483
+</td>
+<td style="text-align:right;">
+-6.186363
+</td>
+<td style="text-align:right;">
+0e+00
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tabela 5.3:</strong> Coeficientes da regressão logística <code>interpretação ~ aspecto</code></p>
+</div>
+<p><br></p>
+<p>Isso significa que, no intercepto (que aqui é o aspecto imperfectivo), há mais ocorrências de fonte do que alvo (o valor de referência), algo que já sabíamos pelo gráfico que fizemos antes. Mais que isso, vemos que a diferença entre as taxas de fonte e alvo é significativa (veja o p-valor associado ao <span class="math inline">\(\beta\)</span> do intercepto).</p>
+<p>Mas por que 0.716404? De onde veio esse valor? Afinal, vimos que a proporção <code>fonte:alvo</code> para imperfectivo era 174:85, ou seja, 2.04 (cf. <strong>Tabela 5.2</strong>).</p>
+<p>Em vez de reportar a <em>odds ratio</em> de fonte frente a alvo para sentenças de aspecto imperfectivo, o modelo linear usa o logaritmo desse valor. Vamos ver qual é o logaritmo de 174:85:</p>
+<p><br></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
+<span class="co"># calculando o logarítimo da chance fonte:alvo para aspecto imperfectivo</span>
+
+<span class="kw">log</span>(<span class="dv">174</span>/<span class="dv">85</span>)
+<span class="co">#&gt; [1] 0.716404</span></code></pre></div>
+<p><br></p>
+<p>Ou seja, o resultado do seu modelo está informando que a taxa de interpretação de fonte é de 2.047 para cada interpretação de alvo no aspecto imperfectivo. A única diferença é que ele está fazendo isso de uma forma um pouco mais complicada. Mas por quê?</p>
+<p>O logaritmo da <em>odds ratio</em>, ou <strong><em>log-odds</em></strong> tem a vantagem de ser um número que pode assumir valores negativos; dessa maneira, podemos saber o sentido da diferença entre as taxas de sucesso e fracasso. Se o valor é positivo, houve mais sucessos que fracassos; se o valor é negativo, ocorreu o inverso.</p>
+<p>Para mostrar porque isso é interessante, vejamos uma tabela que mostra os valores de <em>odds</em> <code>fonte:alvo</code> para o subconjunto de dados de Godoy et al. que estamos analisando e também para um experimento fictício chamado <em>Upsideworld</em>, que teria exatamente os valores opostos. Também mostramos um experimento hipotético em que não há diferença entre as taxas de ocorrência de alvo e fonte.</p>
+<div align="center">
+<table>
+<thead>
+<tr class="header">
+<th align="right">Aspecto</th>
+<th align="right">Odds Ratio Fonte:Alvo</th>
+<th align="right">Log odds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">Imperfectivo Godoy et al.</td>
+<td align="right">174:85 ou 2.047</td>
+<td align="right">0.716404</td>
+</tr>
+<tr class="even">
+<td align="right">Perfectivo Godoy et al.</td>
+<td align="right">107:161 ou 0.664</td>
+<td align="right">-0.4085755</td>
+</tr>
+<tr class="odd">
+<td align="right">Experimento hipotético</td>
+<td align="right">100:100 ou 1</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">Imperfectivo Upsideworld</td>
+<td align="right">85:174 ou 0.488</td>
+<td align="right">-0.716404</td>
+</tr>
+<tr class="odd">
+<td align="right">Perfectivo Upsideworld</td>
+<td align="right">161:107 ou 1.504</td>
+<td align="right">0.4085755</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tabela 5.4:</strong> <em>Odds ratio</em> e <em>log odds</em> por aspecto</p>
+</div>
+<p><br></p>
+<p>A <strong>Tabela 5.4</strong> mostra uma propriedade interessante dos <em>log-odds</em>: quando você inverte a proporção de sucesso e fracasso, o valor de <em>log-odds</em> permanece o mesmo, alterando apenas o seu sinal positivo ou negativo.</p>
+<p>Voltemos a uma pergunta que fizemos no início desta seção:</p>
+<blockquote>
+<p>Se probabilidade e chance são duas maneiras de expressar o resultado de um experimento cuja variável resposta tem distribuição binomial, qual dessas medidas deve entrar como variável resposta em um modelo estatístico? Há outras medidas possíveis?</p>
+</blockquote>
+<p>Percebemos, então, que a regressão logística faz sua análise considerando o <strong>valor logarítimico da chance</strong>, ou, como se costuma chamar, <strong><em>log-odds</em></strong> ou <strong><em>logit</em></strong>, e o motivo disso é simples: esse valor permite uma relação de equivalência de valor absoluto entre as chances de <code>Sucesso:Fracasso</code> e <code>Fracasso:Sucesso</code>, e a direção do efeito é indicada pelo sinal positivo ou negativo.</p>
+<p>Por fim, se você tem o valor de <em>log-odds</em> do intercepto, é possível calcular o seu <em>odds ratio</em> usando a função exponencial. Veja:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
+<span class="co"># calculando a chance (odds ratio) de fonte:alvo para imperfectivo a partir da função exponencial</span>
+
+<span class="kw">exp</span>(<span class="fl">0.716404</span>)
+<span class="co">#&gt; [1] 2.047059</span></code></pre></div>
+<p>Temos aqui o valor da <em>odds ratio</em> para fonte no aspecto imperfectivo, que já havíamos visto que era de 2.047059!</p>
+<p>Repetimos novamente a <strong>Tabela 5.3</strong> com os coeficientes do modelo.</p>
+<div align="center">
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Estimate
+</th>
+<th style="text-align:right;">
+Std. Error
+</th>
+<th style="text-align:right;">
+z value
+</th>
+<th style="text-align:right;">
+Pr(&gt;|z|)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+0.716404
+</td>
+<td style="text-align:right;">
+0.1323323
+</td>
+<td style="text-align:right;">
+5.413677
+</td>
+<td style="text-align:right;">
+1e-07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+aspectoperfective
+</td>
+<td style="text-align:right;">
+-1.124980
+</td>
+<td style="text-align:right;">
+0.1818483
+</td>
+<td style="text-align:right;">
+-6.186363
+</td>
+<td style="text-align:right;">
+0e+00
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tabela 5.3:</strong> Coeficientes da regressão logística <code>interpretação ~ aspecto</code></p>
+</div>
+<p><br></p>
+<p>Os valores dados para o aspecto perfectivo, na segunda linha, não corresponde ao seu <em>log-odd</em>, que é de -0.4085755. Por quê?</p>
+<p>Lembremos que, em um modelo linear, a tabela de coeficientes dá os valores em relação ao intercepto. Assim, o modelo nos informa que, com relação ao aspecto imperfectivo, o <em>log-odd</em> de fonte de do aspecto perfectivo é de -1.124980. Esse valor negativo já nos indica que a chance de ocorrência de uma interpretação de fonte no aspecto perfectivo é <strong>menor</strong> que no aspecto imperfectivo, algo que já sabíamos ao ver o gráfico de distribuição dos dados. Além disso, o p-valor desse coeficiente nos mostra que essa diferença entre aspectos é significativa dado um <span class="math inline">\(\alpha\)</span> de 0.05.</p>
+<p>A questão é: quão menor é a chance de uma leitura de fonte no aspecto perfectivo em comparação ao intercepto? Para saber, basta fazer a conversão do coeficiente - dado em <em>log-odds</em> - usando a função exponencial.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
+<span class="co"># calculando a chance de fonte:alvo no perfectivo em comparação ao intercept</span>
+
+<span class="kw">exp</span>(-<span class="fl">1.124980</span>)
+<span class="co">#&gt; [1] 0.324659</span>
+
+<span class="co"># calculando a chance de alvo:fonte no perfectivo em comparação ao intercept</span>
+
+<span class="kw">exp</span>(<span class="fl">1.124980</span>)
+<span class="co">#&gt; [1] 3.080155</span></code></pre></div>
+<p>O primeiro código nos diz que os participantes produziam 0.3 interpretação de fonte no aspecto perfectivo para cada interpretação de fonte no aspecto imperfectivo. Confuso, né? Fica mais fácil trocar o sinal e dizer que <strong>para cada leitura de fonte no aspecto perfectivo, havia cerca de três leituras de fonte no imperfectivo</strong>.</p>
+</div>
+<div id="modelos-lineares-generalizados-mistos-mlgms" class="section level2">
+<h2>5.4 Modelos Lineares Generalizados Mistos (MLGMs)</h2>
+<p>Como vimos, a regressão logística é um tipo de modelo linear generalizado. Essa classe de modelos lida com variáveis respostas que não têm uma distribuição normal. Contudo, você deve ter notado um problema no modelo que usamos até aqui: ele desconsidera medidas repetidas por participante e item.</p>
+<p>Já discutimos no tutorial anterior a importância de considerar cada participante e cada item como efeitos que introduzem uma variabilidade aleatória que deve estar prevista no modelo de análise. A equação de um modelo linear generalizado misto que considere interceptos e slopes aleatórios por itens e participantes é a mesma que ajustamos para modelos lineares mistos. Você vê essa equação abaixo.</p>
+<blockquote>
+<p>interpretacao ~ aspecto + (1+aspecto|pronome) + (1+aspecto|item)</p>
+</blockquote>
+<p>A implementação no <code>R</code> também não é muito diferente. Precisamos usar o pacote <code>lme4</code>, que permite lidar com efeitos aleatórios, mas dessa vez usamos a função <code>glmer()</code>. Como no caso da função <code>lmer()</code>, inserimos a sintaxe com efeitos fixos e aleatórios e o conjunto de dados.</p>
+<p>Adicionalmente, informamos que a distribuição do nosso conjunto de dados pertence à família binomial. Informamos ainda que tipo de algoritmo otimizador queremos usar (esse tipo de especificação é útil para controlar problemas de convergência em modelos lineares generalizados, e no caso de regressão logística costuma-se usar o <code>bobyqa</code>).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
+<span class="co"># construindo um MLGM com interceptos aleatórios por item e participantes e slopes aleatórios por aspecto para item e participante (problema de convergência)</span>
+
+modelomisto.aspecto =<span class="st"> </span><span class="kw">glmer</span>(interpretacao ~<span class="st"> </span>aspecto +<span class="st"> </span>(<span class="dv">1</span>+aspecto|item) +<span class="st"> </span>(<span class="dv">1</span>+aspecto|participante), <span class="dt">data=</span>pronome, <span class="dt">family=</span><span class="kw">binomial</span>(<span class="dt">link=</span><span class="st">&quot;logit&quot;</span>), <span class="dt">control =</span> <span class="kw">glmerControl</span>(<span class="dt">optimizer =</span> <span class="st">&quot;bobyqa&quot;</span>))
+
+<span class="co"># retirando slope de aspecto por item (problema de convergência)</span>
+
+modelomisto.aspecto =<span class="st"> </span><span class="kw">glmer</span>(interpretacao ~<span class="st"> </span>aspecto +<span class="st"> </span>(<span class="dv">1</span>+aspecto|item) +<span class="st"> </span>(<span class="dv">1</span>|participante), <span class="dt">data=</span>pronome, <span class="dt">family=</span><span class="kw">binomial</span>(<span class="dt">link=</span><span class="st">&quot;logit&quot;</span>), <span class="dt">control =</span> <span class="kw">glmerControl</span>(<span class="dt">optimizer =</span> <span class="st">&quot;bobyqa&quot;</span>))
+
+<span class="co"># retirando slope de aspecto por participante (problema de convergência)</span>
+
+modelomisto.aspecto =<span class="st"> </span><span class="kw">glmer</span>(interpretacao ~<span class="st"> </span>aspecto +<span class="st"> </span>(<span class="dv">1</span>+aspecto|item) +<span class="st"> </span>(<span class="dv">1</span>|participante), <span class="dt">data=</span>pronome, <span class="dt">family=</span><span class="kw">binomial</span>(<span class="dt">link=</span><span class="st">&quot;logit&quot;</span>), <span class="dt">control =</span> <span class="kw">glmerControl</span>(<span class="dt">optimizer =</span> <span class="st">&quot;bobyqa&quot;</span>))
+
+<span class="co"># retirando slope de aspecto por item</span>
+
+modelomisto.aspecto =<span class="st"> </span><span class="kw">glmer</span>(interpretacao ~<span class="st"> </span>aspecto +<span class="st"> </span>(<span class="dv">1</span>|item) +<span class="st"> </span>(<span class="dv">1</span>|participante), <span class="dt">data=</span>pronome, <span class="dt">family=</span><span class="kw">binomial</span>(<span class="dt">link=</span><span class="st">&quot;logit&quot;</span>), <span class="dt">control =</span> <span class="kw">glmerControl</span>(<span class="dt">optimizer =</span> <span class="st">&quot;bobyqa&quot;</span>))
+
+<span class="co"># resultado do MLGM</span>
+<span class="kw">summary</span>(modelomisto.aspecto)
+<span class="co">#&gt; Generalized linear mixed model fit by maximum likelihood (Laplace</span>
+<span class="co">#&gt;   Approximation) [glmerMod]</span>
+<span class="co">#&gt;  Family: binomial  ( logit )</span>
+<span class="co">#&gt; Formula: interpretacao ~ aspecto + (1 | item) + (1 | participante)</span>
+<span class="co">#&gt;    Data: pronome</span>
+<span class="co">#&gt; Control: glmerControl(optimizer = &quot;bobyqa&quot;)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;      AIC      BIC   logLik deviance df.resid </span>
+<span class="co">#&gt;    588.7    605.8   -290.3    580.7      523 </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Scaled residuals: </span>
+<span class="co">#&gt;     Min      1Q  Median      3Q     Max </span>
+<span class="co">#&gt; -3.0007 -0.5828  0.1853  0.5807  5.7836 </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Random effects:</span>
+<span class="co">#&gt;  Groups       Name        Variance Std.Dev.</span>
+<span class="co">#&gt;  participante (Intercept) 2.072    1.440   </span>
+<span class="co">#&gt;  item         (Intercept) 1.001    1.001   </span>
+<span class="co">#&gt; Number of obs: 527, groups:  participante, 48; item, 12</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Fixed effects:</span>
+<span class="co">#&gt;                   Estimate Std. Error z value Pr(&gt;|z|)    </span>
+<span class="co">#&gt; (Intercept)         1.1341     0.3991   2.841  0.00449 ** </span>
+<span class="co">#&gt; aspectoperfective  -1.7215     0.2484  -6.930 4.21e-12 ***</span>
+<span class="co">#&gt; ---</span>
+<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Correlation of Fixed Effects:</span>
+<span class="co">#&gt;             (Intr)</span>
+<span class="co">#&gt; aspctprfctv -0.347</span></code></pre></div>
+<p>Comparando o modelo que temos agora com o que fizemos anteriormente, vemos que os valores dos coeficientes do intercepto e do perfectivo em relação ao intercepto não são os mesmos. Isso é esperado, pois esse último modelo levou em conta a variabilidade por item e sujeito para calcular esses valores.</p>
+<blockquote>
+<p><strong>Atenção!</strong> O primeiro modelo que fizemos seria inadequado para o conjunto de dados que temos em mãos, pois ignorava efeitos aleatórios. Nós o construímos para fins didáticos, apenas para ensinar as diferenças entre <em>odds</em> e <em>log-odds</em>. Se seus dados são resultado de medidas repetidas por itens e participantes, use um modelo misto!</p>
+</blockquote>
+<p>Como vimos nas seções anteriores, a análise por modelos mistos se faz por comparação de modelos aninhados. Desse modo, construímos o <code>modelomisto.null</code>, cuja única diferença do <code>modelomisto.aspecto</code> é <strong>não</strong> contar com a condição <code>aspecto</code> como efeito fixo. Na sequência, comparamos os modelos.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># modelo sem aspecto como efeito fixo </span>
+
+modelomisto.null =<span class="st"> </span><span class="kw">glmer</span>(interpretacao ~<span class="st"> </span><span class="dv">1</span> +<span class="st"> </span>(<span class="dv">1</span>+aspecto|item) +<span class="st"> </span>(<span class="dv">1</span>+aspecto|participante), <span class="dt">data=</span>pronome, <span class="dt">family=</span><span class="kw">binomial</span>(<span class="dt">link=</span><span class="st">&quot;logit&quot;</span>), <span class="dt">control =</span> <span class="kw">glmerControl</span>(<span class="dt">optimizer =</span> <span class="st">&quot;bobyqa&quot;</span>))
+
+<span class="co"># comparação de modelos</span>
+
+<span class="kw">anova</span>(modelomisto.aspecto, modelomisto.null)
+<span class="co">#&gt; Data: pronome</span>
+<span class="co">#&gt; Models:</span>
+<span class="co">#&gt; modelomisto.aspecto: interpretacao ~ aspecto + (1 | item) + (1 | participante)</span>
+<span class="co">#&gt; modelomisto.null: interpretacao ~ 1 + (1 + aspecto | item) + (1 + aspecto | participante)</span>
+<span class="co">#&gt;                     Df    AIC    BIC  logLik deviance Chisq Chi Df</span>
+<span class="co">#&gt; modelomisto.aspecto  4 588.69 605.76 -290.35   580.69             </span>
+<span class="co">#&gt; modelomisto.null     7 605.15 635.02 -295.58   591.15     0      3</span>
+<span class="co">#&gt;                     Pr(&gt;Chisq)</span>
+<span class="co">#&gt; modelomisto.aspecto           </span>
+<span class="co">#&gt; modelomisto.null             1</span></code></pre></div>
+<p>A comparação de modelos nos mostra (sem nenhuma surpresa) que há diferença significativa entre os modelos, e, portanto, aspecto é uma variável que influencia a distribuição dos dados. Podemos reportar nossos resultados da seguinte maneira:</p>
+<blockquote>
+<p>“Ajustamos uma regressão logística com interpretação do pronome como variável resposta, aspecto como efeito fixo e interceptos aleatórios para participantes e itens. O contraste dos níveis do efeito fixo (perfectivo e imperfectivo) foi feito por meio de <em>dummy coding</em>, com <code>alvo</code> como nível de referência. Uma comparação por modelos aninhados indicou que aspecto contribui significativamente para o modelo (<span class="math inline">\(\chi^2\)</span> = 39.741, p &lt; 0.0001)”. O melhor modelo ajustado indica que a probabilidade de uma interpretação de fonte é menor para o aspecto perfectivo comparado ao aspecto imperfectivo (<span class="math inline">\(\beta\)</span> = -1.792, p &lt; 0.0001)</p>
+</blockquote>
+<p>Como não estamos lidando com modelos lineares, mas sim com modelos lineares generalizados, não é correto analisar os resíduos do melhor modelo ajustado a partir das mesmas hipóteses. Até o momento, o diagnóstico de modelos lineares generalizados é um tópico em aberto na pesquisa estatística. Diversos autores já propuseram maneiras de avaliar os resíduos desse tipo de modelo (Cordeiro e Demétrio, 2008; Paula, 2013); entretanto, implementações computacionais desses métodos ainda não estão disponíveis.</p>
+</div>
+<div id="modelos-lineares-generalizados-outras-distribuicoes" class="section level2">
+<h2>5.5 Modelos lineares generalizados: outras distribuições</h2>
+<p>Como esse é um tutorial introdutório, ao falarmos de modelos lineares generalizados mistos nos limitamos apenas ao caso específico da regressão logística, usada para tratar de dados em distribuição binomial. No entanto, a função <code>glmer()</code> foi construída para lidar com outras famílias de distribuição. Consultando a documentação da função <code>family</code>, vemos listadas as seguintes opções:</p>
+<ul>
+<li>binomial</li>
+<li>gaussiana (normal)</li>
+<li>gama</li>
+<li>gaussiana inversa (normal inversa)</li>
+<li>poisson</li>
+<li>quasibinomial</li>
+<li>quasipoisson</li>
+</ul>
+<p>Além disso, há pacotes variados que lidam com outras distribuições não listadas acima. Podemos citar como exemplo o pacote <code>glmmTB</code>, que lida, dentre outras, com poisson-truncada, ou o pacote <code>ordinal</code>, que ajusta modelos mistos de regressão para dados de natureza ordinal.</p>
+<p>Se você seguiu esse tutorial até aqui e não viu nenhum tipo de distribuição próxima das que está acostumado a usar em seu trabalho, procure se informar sobre que distribuições estão mais próximas dos fenômenos que você estuda e busque quais pacotes têm funções para lidar com elas. A comunidade <em>online</em> de usuários de <code>R</code> é bastante ativa, principalmente em fóruns como o <em>Stats Exchange</em><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> (para dúvidas mais ligadas a estatística) e o Stack Overflow <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> (mais voltado para dúvidas sobre programação). Independente do tipo de distribuição, tudo o que vimos ao longo desse tutorial em relação à sintaxe de efeitos fixos, aleatórios e à leitura de contraste de coeficientes se aplica no ajuste de outros tipos de MLMG.</p>
+</div>
+<div id="pratica-modelos-lineares-generalizados" class="section level2">
+<h2>5.6 Prática: modelos lineares generalizados</h2>
+<p>Os dados de Godoy et al. (2018) trazem uma coluna de que não tratamos até agora: <code>classe</code>. Os verbos selecionados para criar as frases do experimento se dividiam em três classes, mas aqui temos apenas duas delas:</p>
+<p><strong>Classe 1</strong></p>
+<p>Transferência de posse do objeto garantida e participantes da ação obrigatoriamente presentes na cena.</p>
+<p>Exemplos:</p>
+<pre><code>      - João trouxe a camisa para Luís. Ele...
+
+      - Raul entregou a caneta para Júlio. Ele...
+      
+      - Rodrigo serviu a torta para Caio. Ele...</code></pre>
+<p><strong>Classe 3</strong></p>
+<p>Transferência de posse do objeto não está necessariamente garantida e não há obrigatoriedade de presença dos dois participantes da ação na mesma cena</p>
+<p>Exemplos:</p>
+<pre><code>      - Carol enviou o email para Cláudia. Ela...
+
+      - Mônica transferiu o dinheiro para Letícia. Ela...
+      
+      - Heitor repassou a mensagem para Diego. Ele...</code></pre>
+<p>A hipótese dos autores era de que os pronomes ambíguos teriam mais chance de fazer referência à fonte em verbos de Classe 3 que para verbos de Classe 1. Isso ocorreria porque o alvo (aquele que recebe o objeto) não precisaria estar presente na representação mental do evento de verbos de Classe 3.</p>
+<p><strong>Tarefa</strong></p>
+<ul>
+<li><p>Faça uma análise completa dos dados para investigar se classe, aspecto e a interação entre esses fatores influenciam na interpretação do pronome.</p></li>
+<li><p>Ao conduzir sua análise, siga todos os passos que você seguiria para a análise de dados.</p></li>
+</ul>
+</div>
+<div id="referencias" class="section level2">
+<h2>REFERÊNCIAS</h2>
+<p>Cordeiro, G. M., &amp; Demétrio, C. G. B. (2008). Modelos lineares generalizados e extensões. Piracicaba: USP.</p>
+<p>Godoy, M. C.; Weissheimer, J. ; Mafra, M. A. (2018) When Grammar Meets Pragmatics: Subject Preference and Coherence Relations in Brazilian Portuguese Pronoun Interpretation. Journal of Portuguese Linguistics, v. 17, p. 17, doi: 10.5334/jpl.197.</p>
+<p>Paula, G. Modelos de regressão com apoio computacional. IME-USP.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Acesse em <a href="https://stats.stackexchange.com/" class="uri">https://stats.stackexchange.com/</a>.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Acesse em <a href="https://pt.stackoverflow.com/" class="uri">https://pt.stackoverflow.com/</a> para fóruns em português e <a href="https://stackoverflow.com/questions" class="uri">https://stackoverflow.com/questions</a> para fóruns em inglês.<a href="#fnref2">↩</a></p></li>
+</ol>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

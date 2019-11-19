@@ -1,0 +1,570 @@
+participante,item,frase,aspecto,classe,interpretacao
+MC,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,ambiguo
+JFF,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+BPLB,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+NAME,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+M C,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+MA,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+S D,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+G A T,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+MC,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+JFF,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,alvo
+BPLB,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+NAME,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+M C,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+MA,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+S D,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+G A T,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,ambiguo
+MC,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+JFF,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+BPLB,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,ambiguo
+NAME,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+M C,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,alvo
+MA,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+S D,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+G A T,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,alvo
+MC,g,João trouxe a camisa para Luís. Ele...,perfective,C1,fonte
+JFF,g,João trouxe a camisa para Luís. Ele...,perfective,C1,fonte
+BPLB,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+NAME,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+M C,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+MA,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+S D,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+G A T,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+MC,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,fonte
+JFF,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,alvo
+BPLB,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,fonte
+NAME,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,ambiguo
+M C,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,ambiguo
+MA,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,ambiguo
+S D,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,alvo
+G A T,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,ambiguo
+MC,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,fonte
+JFF,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+BPLB,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,fonte
+NAME,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,fonte
+M C,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+MA,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+S D,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,fonte
+G A T,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,fonte
+MC,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+JFF,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,ambiguo
+BPLB,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+NAME,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+M C,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,alvo
+MA,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+S D,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+G A T,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+MC,i,Juliana levou o café para Marina. Ela...,perfective,C1,fonte
+JFF,i,Juliana levou o café para Marina. Ela...,perfective,C1,ambiguo
+BPLB,i,Juliana levou o café para Marina. Ela...,perfective,C1,fonte
+NAME,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+M C,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+MA,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+S D,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+G A T,i,Juliana levou o café para Marina. Ela...,perfective,C1,ambiguo
+MC,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+JFF,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,alvo
+BPLB,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+NAME,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+M C,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,alvo
+MA,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+S D,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+G A T,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,ambiguo
+MC,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+JFF,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+BPLB,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,fonte
+NAME,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+M C,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+MA,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+S D,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,fonte
+G A T,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+MC,b,Beatriz encaminhou o ofício para Laura. Ela...,perfective,C3,alvo
+JFF,b,Beatriz encaminhou o ofício para Laura. Ela...,perfective,C3,ambiguo
+BPLB,b,Beatriz encaminhou o ofício para Laura. Ela...,perfective,C3,fonte
+NAME,b,Beatriz encaminhou o ofício para Laura. Ela...,perfective,C3,fonte
+M C,b,Beatriz encaminhou o ofício para Laura. Ela...,perfective,C3,alvo
+MA,b,Beatriz encaminhou o ofício para Laura. Ela...,perfective,C3,alvo
+S D,b,Beatriz encaminhou o ofício para Laura. Ela...,perfective,C3,ambiguo
+MC,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,fonte
+JFF,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+BPLB,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,fonte
+NAME,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+M C,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+MA,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,fonte
+S D,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+G A T,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,fonte
+Luana,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,fonte
+C W,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,ambiguo
+B A S,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,fonte
+MASP,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,alvo
+VPM,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,fonte
+CFTV,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,fonte
+G R A S,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,ambiguo
+MSMS,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,fonte
+Luana,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+C W,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+B A S,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+MASP,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+VPM,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+G R A S,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+MSMS,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+Luana,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+C W,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+B A S,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+MASP,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,alvo
+VPM,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,alvo
+CFTV,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,alvo
+G R A S,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+MSMS,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+Luana,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+C W,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+B A S,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,ambiguo
+MASP,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+VPM,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+CFTV,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+G R A S,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,alvo
+MSMS,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+Luana,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,fonte
+C W,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,fonte
+B A S,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+MASP,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,ambiguo
+VPM,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,fonte
+CFTV,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+G R A S,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+MSMS,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+Luana,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,fonte
+C W,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,fonte
+B A S,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,fonte
+MASP,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+VPM,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,fonte
+CFTV,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+G R A S,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+MSMS,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+Luana,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,fonte
+C W,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,ambiguo
+B A S,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,fonte
+MASP,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+VPM,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+CFTV,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+G R A S,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+MSMS,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+Luana,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,fonte
+C W,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,ambiguo
+B A S,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,ambiguo
+MASP,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,alvo
+VPM,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,fonte
+CFTV,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,alvo
+G R A S,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,alvo
+Luana,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+C W,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+B A S,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+MASP,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+VPM,g,João trouxe a camisa para Luís. Ele...,perfective,C1,fonte
+CFTV,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+G R A S,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+MSMS,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+Luana,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+C W,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+B A S,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+MASP,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+VPM,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+G R A S,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+Luana,i,Juliana levou o café para Marina. Ela...,perfective,C1,fonte
+C W,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+B A S,i,Juliana levou o café para Marina. Ela...,perfective,C1,fonte
+MASP,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+VPM,i,Juliana levou o café para Marina. Ela...,perfective,C1,fonte
+CFTV,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+G R A S,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+MSMS,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+Luana,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+C W,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+B A S,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+MASP,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+VPM,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+CFTV,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,ambiguo
+G R A S,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,alvo
+MSMS,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+ML,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+MGG,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+DCL,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+ngd,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+MGMF,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+N.P.S.,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,ambiguo
+T,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,alvo
+LP,n,Mônica estava transferindo o dinheiro para Letícia. Ela..,imperfective,C3,fonte
+ML,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,alvo
+MGG,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,alvo
+DCL,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,alvo
+ngd,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+MGMF,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+N.P.S.,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,alvo
+T,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,alvo
+LP,d,Carol enviou o email para Cláudia. Ela...,perfective,C3,fonte
+ML,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,fonte
+MGG,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,ambiguo
+DCL,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,fonte
+ngd,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,alvo
+MGMF,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,ambiguo
+N.P.S.,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,ambiguo
+T,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,fonte
+LP,p,Raul estava entregando a caneta para Júlio. Ele...,imperfective,C1,alvo
+ML,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,alvo
+MGG,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+DCL,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,ambiguo
+ngd,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+MGMF,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+N.P.S.,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+T,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,alvo
+LP,r,Rogério estava despachando a encomenda para Samuel. Ele...,imperfective,C3,fonte
+ML,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+MGG,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+DCL,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+ngd,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+MGMF,g,João trouxe a camisa para Luís. Ele...,perfective,C1,fonte
+N.P.S.,g,João trouxe a camisa para Luís. Ele...,perfective,C1,fonte
+T,g,João trouxe a camisa para Luís. Ele...,perfective,C1,fonte
+LP,g,João trouxe a camisa para Luís. Ele...,perfective,C1,alvo
+ML,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+MGG,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+DCL,i,Juliana levou o café para Marina. Ela...,perfective,C1,fonte
+ngd,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+MGMF,i,Juliana levou o café para Marina. Ela...,perfective,C1,fonte
+T,i,Juliana levou o café para Marina. Ela...,perfective,C1,alvo
+LP,i,Juliana levou o café para Marina. Ela...,perfective,C1,ambiguo
+ML,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+MGG,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,alvo
+DCL,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,alvo
+ngd,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+MGMF,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+N.P.S.,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,alvo
+T,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,fonte
+LP,k,Lúcia estava dando o presente para Márcia. Ela...,imperfective,C1,ambiguo
+ML,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,fonte
+MGG,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+DCL,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+ngd,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+MGMF,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+N.P.S.,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+T,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+LP,q,Rodrigo serviu a torta para Caio. Ele...,perfective,C1,alvo
+ML,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+MGG,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+DCL,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+ngd,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+MGMF,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+N.P.S.,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+T,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+LP,h,Jorge estava mandando a carta para Rafael. Ele...,imperfective,C3,fonte
+ML,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,alvo
+MGG,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,alvo
+DCL,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,alvo
+ngd,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,fonte
+MGMF,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,fonte
+N.P.S.,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,fonte
+T,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,fonte
+LP,b,Beatriz encaminhou o ofício para Laura. Ela..,perfective,C3,alvo
+ML,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,fonte
+MGG,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+DCL,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+ngd,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,fonte
+MGMF,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,fonte
+N.P.S.,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+T,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,fonte
+LP,f,Heitor repassou a mensagem para Diego. Ele...,perfective,C3,alvo
+ML,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+MGG,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+DCL,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+ngd,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+MGMF,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+N.P.S.,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,alvo
+T,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,ambiguo
+LP,j,Karen estava passando o caderno para Sara. Ela...,imperfective,C1,fonte
+RMGL,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+LGP,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+MSS,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+INC,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+LMSA,j,Karen passou o caderno para Sara. Ela...,perfective,C1,fonte
+BFJ,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+PBS1,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+ACBO,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+RMGL,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+LGP,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+MSS,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+INC,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,fonte
+LMSA,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,fonte
+BFJ,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+PBS1,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+ACBO,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+RMGL,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+LGP,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,alvo
+MSS,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,alvo
+INC,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+LMSA,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+BFJ,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+PBS1,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,alvo
+ACBO,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+RMGL,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+LGP,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+MSS,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,alvo
+INC,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+LMSA,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+BFJ,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+PBS1,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+ACBO,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+RMGL,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,alvo
+LGP,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+MSS,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,alvo
+INC,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+LMSA,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+BFJ,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+PBS1,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,alvo
+ACBO,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+RMGL,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+LGP,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,alvo
+MSS,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,alvo
+INC,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+LMSA,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+BFJ,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+PBS1,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,alvo
+ACBO,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+RMGL,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,alvo
+LGP,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+MSS,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,alvo
+INC,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+LMSA,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+BFJ,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+PBS1,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+ACBO,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+RMGL,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,alvo
+LGP,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+MSS,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,alvo
+INC,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+LMSA,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+BFJ,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+PBS1,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+ACBO,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,ambiguo
+RMGL,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+LGP,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+MSS,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+INC,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,fonte
+LMSA,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,fonte
+BFJ,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+PBS1,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+ACBO,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+RMGL,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,alvo
+LGP,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,ambiguo
+MSS,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,alvo
+INC,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,fonte
+LMSA,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,fonte
+BFJ,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,alvo
+PBS1,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,fonte
+ACBO,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,alvo
+RMGL,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+LGP,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+MSS,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,alvo
+INC,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+LMSA,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+BFJ,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+PBS1,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+ACBO,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+RMGL,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+LGP,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+MSS,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+INC,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+LMSA,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+BFJ,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,fonte
+PBS1,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+ACBO,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+GAP,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+GTC,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+JRFS,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,fonte
+GRF,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,fonte
+M A,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+FMdM,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+PBS,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+WA,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,fonte
+GAP,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,alvo
+GTC,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,alvo
+JRFS,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+GRF,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+M A,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,alvo
+FMdM,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,alvo
+PBS,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,alvo
+WA,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+GAP,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+GTC,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,fonte
+JRFS,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+GRF,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+M A,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+FMdM,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+PBS,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+WA,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,fonte
+GAP,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,fonte
+GTC,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,fonte
+JRFS,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,ambiguo
+GRF,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,alvo
+M A,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,alvo
+FMdM,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,alvo
+PBS,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,alvo
+WA,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,fonte
+GAP,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,alvo
+GTC,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+JRFS,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,alvo
+GRF,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+M A,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,alvo
+FMdM,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,alvo
+PBS,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,alvo
+WA,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+GAP,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,alvo
+GTC,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+JRFS,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,alvo
+GRF,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+M A,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,alvo
+FMdM,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+PBS,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,alvo
+WA,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+GAP,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,alvo
+GTC,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+JRFS,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,alvo
+GRF,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+M A,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,alvo
+FMdM,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,alvo
+PBS,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,alvo
+WA,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+GAP,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+GTC,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+JRFS,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+GRF,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+M A,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+FMdM,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+PBS,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+WA,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+GAP,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+GTC,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+JRFS,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,fonte
+GRF,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+M A,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+FMdM,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+PBS,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+WA,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+GAP,j,Karen passou o caderno para Sara. Ela...,perfective,C1,fonte
+GTC,j,Karen passou o caderno para Sara. Ela...,perfective,C1,fonte
+JRFS,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+GRF,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+M A,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+FMdM,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+PBS,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+WA,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+GAP,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,alvo
+GTC,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+JRFS,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,alvo
+GRF,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,alvo
+M A,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+FMdM,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,alvo
+PBS,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,alvo
+WA,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+GAP,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,alvo
+GTC,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+JRFS,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+GRF,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+M A,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+FMdM,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,alvo
+PBS,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+WA,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+FFB,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,ambiguo
+LA1,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+BS,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,fonte
+L F S N,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+M,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,fonte
+ILPP,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,fonte
+LA,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,alvo
+Ca,g,João estava trazendo a camisa para Luís. Ele...,imperfective,C1,fonte
+FFB,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+LA1,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+BS,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+L F S N,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+M,j,Karen passou o caderno para Sara. Ela...,perfective,C1,fonte
+ILPP,j,Karen passou o caderno para Sara. Ela...,perfective,C1,ambiguo
+LA,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+Ca,j,Karen passou o caderno para Sara. Ela...,perfective,C1,alvo
+FFB,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,alvo
+LA1,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+BS,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+L F S N,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,alvo
+M,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,ambiguo
+ILPP,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,fonte
+LA,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,alvo
+Ca,q,Rodrigo estava servindo a torta para Caio. Ele...,imperfective,C1,alvo
+FFB,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+LA1,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+BS,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,alvo
+L F S N,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,alvo
+M,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+ILPP,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,ambiguo
+LA,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+Ca,h,Jorge mandou a carta para Rafael. Ele...,perfective,C3,fonte
+FFB,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+LA1,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,alvo
+BS,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+L F S N,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,alvo
+M,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,ambiguo
+ILPP,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+LA,b,Beatriz estava encaminhando o ofício para Laura. Ela...,imperfective,C3,fonte
+FFB,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,ambiguo
+LA1,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,alvo
+BS,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,fonte
+L F S N,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,alvo
+M,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,ambiguo
+ILPP,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,fonte
+LA,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,alvo
+Ca,r,Rogério despachou a encomenda para Samuel. Ele...,perfective,C3,alvo
+FFB,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,fonte
+LA1,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+BS,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,fonte
+L F S N,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+M,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,fonte
+ILPP,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,fonte
+LA,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+Ca,k,Lúcia deu o presente para Márcia. Ela...,perfective,C1,alvo
+FFB,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+LA1,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+BS,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,fonte
+L F S N,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+M,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,fonte
+ILPP,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,fonte
+LA,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,alvo
+Ca,p,Raul entregou a caneta para Júlio. Ele...,perfective,C1,fonte
+FFB,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+LA1,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,alvo
+BS,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+L F S N,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+M,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+ILPP,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,fonte
+LA,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,alvo
+Ca,i,Juliana estava levando o café para Marina. Ela...,imperfective,C1,ambiguo
+FFB,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+LA1,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+BS,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+L F S N,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,alvo
+M,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+ILPP,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,alvo
+LA,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,ambiguo
+Ca,n,Mônica transferiu o dinheiro para Letícia. Ela...,perfective,C3,fonte
+FFB,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+LA1,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,alvo
+BS,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+L F S N,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,alvo
+M,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+ILPP,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+LA,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+Ca,f,Heitor estava repassando a mensagem para Diego. Ele...,imperfective,C3,fonte
+FFB,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+LA1,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,ambiguo
+BS,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+L F S N,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,alvo
+M,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+ILPP,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+LA,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte
+Ca,d,Carol estava enviando o email para Cláudia. Ela...,imperfective,C3,fonte

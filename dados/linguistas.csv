@@ -1,0 +1,68 @@
+genero,idade,altura,altura.2,peso,tamanho.pe,instituicao,dialeto,deslocamento,status,esporte
+Feminino,33,157,157,54,35,UFRN,Bolacha,veículo próprio ou carona,professor,Sim
+Feminino,23,167,167,67,36,Unicamp,Bolacha,veículo próprio ou carona,aluno,Não
+Feminino,49,158,158,50,33,UFMG,Biscoito,veículo próprio ou carona,aluno,Sim
+Feminino,23,164,164,54,36,UFMG,Biscoito,outro,aluno,Sim
+Masculino,28,166,166,75,38,Unicamp,Bolacha,à pé,aluno,Sim
+Masculino,24,174,174,57,41,UFMG,Biscoito,transporte público,aluno,Não
+Feminino,41,160,160,60,36,Unicamp,Bolacha,veículo próprio ou carona,professor,Não
+Masculino,35,172,172,85,42,Unicamp,Biscoito,à pé,professor,Sim
+Feminino,53,163,163,58,36,UFMG,Bolacha,transporte público,aluno,Sim
+Feminino,33,167,167,64,38,UFRN,Biscoito,transporte público,aluno,Sim
+Feminino,25,151,151,54,35,UFMG,Biscoito,veículo próprio ou carona,aluno,Sim
+Feminino,19,160,160,50,36,UFMG,Biscoito,veículo próprio ou carona,aluno,Não
+Feminino,21,156,156,63,37,UFMG,Biscoito,transporte público,aluno,Sim
+Feminino,28,161,161,57,35,UFMG,Biscoito,transporte público,aluno,Sim
+Feminino,26,151,151,56,35,UFRN,Biscoito,veículo próprio ou carona,aluno,Não
+Feminino,39,168,168,70,37,UFRN,Biscoito,veículo próprio ou carona,professor,Sim
+Masculino,31,180,180,102,41,Unicamp,Bolacha,transporte público,aluno,Sim
+Feminino,35,163,163,85,78,UFMG,Biscoito,veículo próprio ou carona,aluno,Sim
+Feminino,23,150,150,56,34,UFRN,Biscoito,transporte público,aluno,Sim
+Feminino,21,165,165,57,37,UFRN,Biscoito,transporte público,aluno,Não
+Feminino,21,157,157,62,37,UFMG,Bolacha,à pé,aluno,Não
+Masculino,37,172,172,75,42,UFRN,Biscoito,veículo próprio ou carona,professor,Sim
+Feminino,21,162,162,55,36,UFRN,Biscoito,transporte público,aluno,Não
+Masculino,26,178,178,90,41,UFRN,Biscoito,transporte público,aluno,Sim
+Feminino,39,163,163,53,35,Unicamp,Biscoito,veículo próprio ou carona,professor,Sim
+Feminino,45,168,168,62,37,UFMG,Biscoito,veículo próprio ou carona,professor,Sim
+Feminino,20,157,157,59,34,Unicamp,Bolacha,à pé,aluno,Não
+Masculino,31,174,174,75,39,Unicamp,Biscoito,veículo próprio ou carona,aluno,Não
+Masculino,22,165,165,77,39,Unicamp,Bolacha,à pé,aluno,Não
+Feminino,28,161,161,60,35,UFRN,Biscoito,transporte público,aluno,Sim
+Masculino,21,168,168,70,38,UFRN,Biscoito,veículo próprio ou carona,aluno,Não
+Feminino,37,165,165,68,37,UFRN,Bolacha,veículo próprio ou carona,professor,Não
+Feminino,23,155,155,65,35,Outra,Biscoito,veículo próprio ou carona,aluno,Não
+Feminino,56,165,165,61,37,Unicamp,Bolacha,veículo próprio ou carona,professor,Sim
+Masculino,44,160,160,79,36,UFMG,Biscoito,transporte público,aluno,Não
+Feminino,39,165,165,92,38,UFMG,Biscoito,veículo próprio ou carona,aluno,Não
+Feminino,29,167,167,64,38,Outra,Biscoito,veículo próprio ou carona,aluno,Sim
+Feminino,33,162,162,80,36,Outra,Bolacha,veículo próprio ou carona,aluno,Sim
+Feminino,27,155,155,58,36,UFMG,Bolacha,outro,aluno,Sim
+Masculino,24,184,184,74,40,UFMG,Bolacha,à pé,aluno,Não
+Masculino,31,168,168,68,38,UFMG,Bolacha,à pé,professor,Sim
+Masculino,32,182,182,95,42,UFMG,Bolacha,à pé,aluno,Não
+Feminino,21,168,168,62,37,Outra,Biscoito,transporte público,aluno,Sim
+Feminino,24,160,160,70,35,UFRN,Biscoito,transporte público,aluno,Sim
+Masculino,32,173,173,82,40,UFRN,Biscoito,transporte público,aluno,Sim
+Feminino,22,165,165,63,36,UFRN,Bolacha,transporte público,aluno,Sim
+Masculino,26,178,178,58,43,UFMG,Biscoito,transporte público,aluno,Não
+Feminino,22,175,175,89,38,UFMG,Bolacha,à pé,aluno,Sim
+Masculino,24,175,175,63,39,Unicamp,Bolacha,transporte público,aluno,Não
+Feminino,24,155,155,50,34,Unicamp,Bolacha,transporte público,aluno,Não
+Feminino,21,161,161,65,36,Unicamp,Bolacha,à pé,aluno,Não
+Feminino,27,152,152,60,35,UFMG,Biscoito,transporte público,aluno,Não
+Feminino,30,163,163,90,37,UFMG,Biscoito,transporte público,aluno,Sim
+Masculino,25,175,175,90,39,UFMG,Biscoito,veículo próprio ou carona,aluno,Sim
+Masculino,29,167,167,75,38,UFRN,Biscoito,veículo próprio ou carona,aluno,Sim
+Feminino,39,162,162,50,35,UFMG,Biscoito,veículo próprio ou carona,aluno,Sim
+Feminino,38,152,152,61,34,Outra,Biscoito,veículo próprio ou carona,aluno,Não
+Feminino,28,173,173,87,38,UFMG,Biscoito,transporte público,aluno,Não
+Masculino,25,179,179,95,40,Unicamp,Bolacha,à pé,aluno,Sim
+Feminino,18,160,160,52,36,UFMG,Biscoito,veículo próprio ou carona,aluno,Não
+Masculino,22,181,181,86,41,UFMG,Bolacha,outro,aluno,Não
+Masculino,24,178,178,82,41,UFRN,Biscoito,veículo próprio ou carona,aluno,Sim
+Feminino,25,163,163,57,36,UFMG,Biscoito,veículo próprio ou carona,aluno,Sim
+Feminino,41,161,161,80,38,UFMG,Biscoito,veículo próprio ou carona,aluno,Não
+Feminino,20,165,165,100,37,UFMG,Biscoito,transporte público,aluno,Não
+Feminino,36,167,167,80,38,Unicamp,Bolacha,à pé,aluno,Não
+Masculino,27,181,181,90,41,Unicamp,Bolacha,à pé,aluno,Não
