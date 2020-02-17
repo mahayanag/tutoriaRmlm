@@ -6,7 +6,7 @@
 
 #### Para seguir este material online:
 
-> Se você não for fã de pdf e preferir seguir os tópicos do tutorial no computador, visite <https://mahayana.me/mlm>
+> Se você não é grande fã de arquivos pdf e prefere seguir os tópicos do tutorial no computador, visite <https://mahayana.me/mlm>
 
 **Apresentação: objetivo e público alvo**
 
